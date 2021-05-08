@@ -269,17 +269,19 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
 <script src="js/google-map.js"></script>
 <script src="js/main.js"></script>
-		<script type="text/javascript">
-		    (function(d, m){
-			var kommunicateSettings = 
-			    {"appId":"35d71ea0cbb2b492dd70564c11459df03","popupWidget":true,"automaticChatOpenOnNavigation":true};
-			var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
-			s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
-			var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
-			window.kommunicate = m; m._globals = kommunicateSettings;
-		    })(document, window.kommunicate || {});
-		/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
-		</script>
+	<script>
+	  window.watsonAssistantChatOptions = {
+	      integrationID: "93f639f5-68d2-4ab3-8fcb-d63a972c73bd", // The ID of this integration.
+	      region: "eu-gb", // The region your integration is hosted in.
+	      serviceInstanceID: "bd0f1122-aad3-477e-86bd-b8b8fd2a81eb", // The ID of your service instance.
+	      onLoad: function(instance) { instance.render(); }
+	    };
+	  setTimeout(function(){
+	    const t=document.createElement('script');
+	    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+	    document.head.appendChild(t);
+	  });
+	</script>
 </body>
 
 </html>
