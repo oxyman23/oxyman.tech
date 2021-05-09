@@ -311,18 +311,17 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
     integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
     crossorigin="anonymous"></script>
-  <!-- <script type="text/javascript">
-  $(document).ready(function(){
-    $('li').removeClass('active');
-    $('li a').each(function() {
-       $found = $.contains($(this).prop("href"),location.pathname);
-       if ($found) {
-           $(this).closest('li').addClass('active');
-           break;
-        }
-    });
-})
-</script> -->
+      <script type="text/javascript">
+        (function(d, m){
+            var kommunicateSettings = 
+                {"appId":"35d71ea0cbb2b492dd70564c11459df03","popupWidget":true,"automaticChatOpenOnNavigation":true};
+            var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+            s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+            var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+            window.kommunicate = m; m._globals = kommunicateSettings;
+        })(document, window.kommunicate || {});
+    /* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+      </script>
 
 </body>
 <style>
